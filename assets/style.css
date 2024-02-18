@@ -69,6 +69,7 @@ body {
 
 .picture img {
   width: 100%;
+  height: auto;
 }
 #about-me {
   flex: 2;
@@ -201,6 +202,7 @@ body {
 #contact .container {
   display: flex;
 }
+
 /* 
  .picture.right::before {
   content: " ";
@@ -349,6 +351,7 @@ input[type="submit"] {
     padding-block: 1em;
     text-align: center;
   }
+
   .picture.left::before,
   .picture.right::before {
     height: 150px;
