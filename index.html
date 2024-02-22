@@ -2,74 +2,90 @@
 <html lang="fr">
 
 <head>
+	<!-- Métadonnées -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description"
 		content="Nina Carducci, photographe professionnelle à Bordeaux, spécialisée dans les shootings photo, les retouches et les albums photos personnalisés.">
 	<title>Nina Carducci • Photographe</title>
-	<link rel="stylesheet" href="./assets/style.css">
+
+	<!-- Pré-connexion aux domaines requis -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- Feuilles de style -->
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="./assets/style.css">
 	<link
 		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
 		rel="stylesheet">
-	<meta charset="UTF-8">
+
+	<!-- Préchargement des ressources -->
 	<link rel="preload" as="image" href="./assets/images/nina-carducci-small.webp" media="(max-width: 767px)">
 	<link rel="preload" as="image" href="./assets/images/nina-carducci-large.webp" media="(min-width: 768px)">
-
-	<link rel="preload" href="./assets/style.css" as="style">
 	<link rel="preload" href="./assets/bootstrap/bootstrap.bundle.js" as="script">
+	<link rel="preload" href="./assets/style.css" as="style">
 
-	<script type="application/ld+json">
-	{
-	  "@context": "http://schema.org",
-	  "@type": "Person",
-	  "name": "Nina Carducci",
-	  "url": "http://www.ninacarducci.photo",
-	  "sameAs": [
-	    "https://www.instagram.com/ninacarducci.photo/"
-	  ],
-	  "jobTitle": "Photographe professionnelle",
-	  "worksFor": {
-	    "@type": "Organization",
-	    "name": "Nina Carducci Photographie"
-	  },
-	  "address": {
-	    "@type": "PostalAddress",
-	    "streetAddress": "68 avenue Alsace-Lorraine",
-	    "addressLocality": "Bordeaux",
-	    "postalCode": "33200",
-	    "addressCountry": "FR"
-	  },
-	  "email": "contact@ninacarducci.photo",
-	  "telephone": "+33 5 56 67 78 89"
-	}
-	</script>
+	<!-- Métadonnées pour le référencement et les réseaux sociaux -->
 	<meta property="og:title" content="Nina Carducci - Photographe">
 	<meta property="og:description"
 		content="Photographe professionnelle à Bordeaux spécialisée dans les mariages, les événements et les portraits.">
 	<meta property="og:image" content="./assets/images/nina-carducci.webp">
 	<meta property="og:url" content="http://www.ninacarducci.photo">
-
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Nina Carducci - Photographe">
 	<meta name="twitter:description"
 		content="Photographe professionnelle à Bordeaux spécialisée dans les mariages, les événements et les portraits.">
 	<meta name="twitter:image" content="./assets/images/nina-carducci.webp">
 
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-	<script src="./assets/bootstrap/bootstrap.bundle.js" async></script>
+	<!-- Scripts (jQuery inclus avant les autres pour éviter les dépendances manquantes) -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
 	<script src="./assets/maugallery.js" defer></script>
 	<script src="./assets/scripts.js" defer></script>
+
+	<!-- Données structurées -->
+	<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Nina Carducci",
+    "jobTitle": "Photographe professionnel",
+    "image": "./assets/images/nina-carducci.webp",
+    "telephone": "+33 5 56 67 78 89",
+    "email": "contact@ninacarducci.photo",
+    "sameAs" : "https://www.instagram.com/ninacarducci.photo",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "68 avenue Alsace-Lorraine",
+        "addressLocality": "Bordeaux",
+        "addressRegion": "Nouvelle-Aquitaine",
+        "postalCode": "33200",
+        "addressCountry": "FR"
+    },
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+            "lundi",
+            "mardi",
+            "mercredi",
+            "jeudi",
+            "vendredi"
+        ],
+        "opens": "10:00",
+        "closes": "19:00"
+    },
+    "priceRange": "50€ - €400"
+}
+</script>
 </head>
 
 <body>
 	<header>
 		<div class="top-header" role="banner">
 			<h1 class="name">Nina Carducci</h1>
-			<nav class="nav" role="navigation">
+			<nav class="nav">
 				<ul>
 					<li><a href="#about">À propos</a></li>
 					<li><a href="#gallery">Galerie</a></li>
@@ -120,7 +136,7 @@
 			</section>
 		</div>
 	</header>
-	<main role="main">
+	<main>
 		<div id="about">
 			<div class="picture left">
 				<picture>
@@ -246,12 +262,12 @@
 			</figure>
 		</section>
 	</main>
-	<footer id="contact" role="contentinfo">
+	<footer id="contact">
 		<div class="container">
 			<div class="form-container">
 				<h2>Une question ? Une demande de devis ?</h2>
 				<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
-				<form action="" method="post">
+				<form action="/" method="post">
 					<label for="nom">Nom</label>
 					<input type="text" name="nom" id="nom">
 					<label for="email">E-mail</label>
